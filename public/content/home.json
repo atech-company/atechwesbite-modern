@@ -1,0 +1,48 @@
+{
+  "heroHeading1": "Digital Solutions",
+  "heroHeading2": "That Transform",
+  "heroSubtitle": "We craft cutting-edge software, stunning websites, and powerful mobile apps that drive your business forward in the digital age.",
+  "heroCtas": [
+    { "label": "Start Your Project", "href": "/contact" },
+    { "label": "View Our Work", "href": "/projects", "variant": "outline" }
+  ],
+  "serviceIcons": [
+    { "label": "Web Development", "icon": "Code" },
+    { "label": "Mobile Apps", "icon": "Smartphone" },
+    { "label": "UI/UX Design", "icon": "Palette" }
+  ],
+  "services": [
+    {
+      "icon": "Code",
+      "title": "Web Development",
+      "description": "Modern, responsive websites and web applications built with cutting-edge technologies.",
+      "features": ["React & Next.js", "E-commerce Solutions", "CMS Development", "API Integration"],
+      "colorFrom": "primary/20",
+      "colorTo": "primary/10"
+    },
+    {
+      "icon": "Smartphone",
+      "title": "Mobile App Development",
+      "description": "Native and cross-platform mobile applications for iOS and Android devices.",
+      "features": ["React Native", "Flutter Development", "iOS/Android Native", "App Store Optimization"],
+      "colorFrom": "secondary/20",
+      "colorTo": "secondary/10"
+    },
+    {
+      "icon": "Palette",
+      "title": "UI/UX Design",
+      "description": "Beautiful, user-centered designs that enhance user experience and drive engagement.",
+      "features": ["User Research", "Wireframing", "Prototyping", "Design Systems"],
+      "colorFrom": "accent/20",
+      "colorTo": "accent/10"
+    },
+    {
+      "icon": "Settings",
+      "title": "Custom Systems",
+      "description": "Tailored software solutions and enterprise systems to meet your specific needs.",
+      "features": ["Database Design", "Cloud Integration", "API Development", "DevOps Setup"],
+      "colorFrom": "primary/20",
+      "colorTo": "accent/10"
+    }
+  ]
+}

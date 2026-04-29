@@ -1,0 +1,108 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow
+
+local_backend: true
+
+i18n:
+  structure: single_file
+  locales: [en]
+  default_locale: en
+
+collections:
+  - name: "home"
+    label: "Homepage"
+    files:
+      - file: "public/content/home.json"
+        label: "Home Content"
+        name: "homeContent"
+        fields:
+          - { label: "Hero Heading Line 1", name: "heroHeading1", widget: "string" }
+          - { label: "Hero Heading Line 2", name: "heroHeading2", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - label: "Hero CTAs"
+            name: "heroCtas"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Href", name: "href", widget: "string" }
+              - { label: "Variant", name: "variant", widget: "string", required: false }
+          - label: "Service Icons"
+            name: "serviceIcons"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "select", options: ["Code", "Smartphone", "Palette", "Settings"] }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Features", name: "features", widget: "list", field: { label: Feature, name: feature, widget: string } }
+              - { label: "Icon", name: "icon", widget: "select", options: ["Code", "Smartphone", "Palette", "Settings"] }
+              - { label: "Color From", name: "colorFrom", widget: "string", default: "primary/20" }
+              - { label: "Color To", name: "colorTo", widget: "string", default: "primary/10" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "public/content/pages/about.json"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "public/content/pages/services.json"
+        label: "Services Page"
+        name: "servicesPage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+      - file: "public/content/pages/projects.json"
+        label: "Projects Page"
+        name: "projectsPage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+      - file: "public/content/pages/faqs.json"
+        label: "FAQs Page"
+        name: "faqsPage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: text }
+      - file: "public/content/pages/contact.json"
+        label: "Contact Page"
+        name: "contactPage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - file: "public/content/projects/list.json"
+        label: "Projects List"
+        name: "projectsList"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Cover Image", name: "cover", widget: "image", required: false }
+              - { label: "Tags", name: "tags", widget: "list", required: false }
+              - { label: "Body", name: "body", widget: "markdown", required: false }

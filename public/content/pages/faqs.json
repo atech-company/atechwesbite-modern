@@ -1,0 +1,7 @@
+{
+  "title": "Frequently Asked Questions",
+  "faqs": [
+    { "question": "How do we start?", "answer": "Contact us with your project idea." },
+    { "question": "Do you offer support?", "answer": "Yes, we provide ongoing support and maintenance." }
+  ]
+}
